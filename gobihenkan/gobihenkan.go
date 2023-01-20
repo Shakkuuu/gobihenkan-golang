@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-var keyword = map[string]string{
+var Keyword = map[string]string{
 	"まだ":   "まだなのだ",
 	"した":   "したのだ",
 	"った":   "ったのだ",
@@ -20,7 +20,7 @@ var keyword = map[string]string{
 
 func ChangeGobi(w string) string {
 	var i bool
-	for key, value := range keyword {
+	for key, value := range Keyword {
 		w = strings.ReplaceAll(w, key, value)
 	}
 	i = strings.HasSuffix(w, "のだ")
