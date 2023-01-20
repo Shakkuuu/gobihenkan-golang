@@ -9,5 +9,6 @@ import (
 func main() {
 	var word string
 	fmt.Scanln(&word)
-	gobihenkan.ChangeGobi(word)
+	w := gobihenkan.ChangeGobi(word)
+	fmt.Println(w)
 }
