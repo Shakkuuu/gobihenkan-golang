@@ -1,7 +1,6 @@
 package gobihenkan
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -25,25 +24,25 @@ func ChangeGobi(w string) string {
 	}
 	i = strings.HasSuffix(w, "のだ")
 	if i {
-		fmt.Println(w)
+		// fmt.Println(w)
 		return w
 	}
 
 	o := strings.HasSuffix(w, "る")
 	if o {
 		w += "のだ"
-		fmt.Println(w)
+		// fmt.Println(w)
 		return w
 	}
 
 	s := strings.HasSuffix(w, "た")
 	if s {
 		w += "のだ"
-		fmt.Println(w)
+		// fmt.Println(w)
 		return w
 	}
 
 	w += "なのだ"
-	fmt.Println(w)
+	// fmt.Println(w)
 	return w
 }
