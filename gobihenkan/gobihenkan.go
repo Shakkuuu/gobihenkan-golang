@@ -18,7 +18,7 @@ var keyword = map[string]string{
 	"ます":   "ますのだ",
 }
 
-func ChangeGobi(w string) {
+func ChangeGobi(w string) string {
 	var i bool
 	for key, value := range keyword {
 		w = strings.ReplaceAll(w, key, value)
@@ -26,23 +26,24 @@ func ChangeGobi(w string) {
 	i = strings.HasSuffix(w, "のだ")
 	if i {
 		fmt.Println(w)
-		return
+		return w
 	}
 
 	o := strings.HasSuffix(w, "る")
 	if o {
 		w += "のだ"
 		fmt.Println(w)
-		return
+		return w
 	}
 
 	s := strings.HasSuffix(w, "た")
 	if s {
 		w += "のだ"
 		fmt.Println(w)
-		return
+		return w
 	}
 
 	w += "なのだ"
 	fmt.Println(w)
+	return w
 }
